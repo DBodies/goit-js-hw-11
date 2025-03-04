@@ -3,7 +3,7 @@ import { rendenImg } from "./js/render-functions";
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css"
 
-const searchForm = document.querySelector("#search-form")
+const searchForm = document.querySelector(".form")
 const searchInput = document.querySelector("#search-input")
 const loader = document.querySelector("#loader")
 const gallery = document.querySelector(".gallery")
