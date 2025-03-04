@@ -1,5 +1,5 @@
 import { fetchImg } from "./js/pixabay-api";
-import { rendenImg } from "./js/render-function";
+import { rendenImg } from "./js/render-functions";
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css"
 
