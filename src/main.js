@@ -1,5 +1,5 @@
 import { fetchImg } from "./js/pixabay-api";
-import { rendenImg } from "./js/render-functions";
+import { renderGallery, clearGallery } from "./js/render-functions";
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css"
 
@@ -26,7 +26,7 @@ searchForm.addEventListener("submit", async (event) => {
         })
         return
     }
-    gallery.innerHTML = ""
+clearGallery()
     loader.style.display = "block"
     try {
         const images = await fetchImg(query)
@@ -38,7 +38,7 @@ searchForm.addEventListener("submit", async (event) => {
             })
             return
         }
-        rendenImg(images)
+        renderGallery(images)
     } catch (error) {
         iziToast.error ({
                   title: "Error",
